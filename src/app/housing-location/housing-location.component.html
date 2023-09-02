@@ -1,0 +1,16 @@
+<section class="bg-sky-50 rounded-md overflow-hidden w-full pb-5">
+  <img
+    class="object-fill h-96 w-full"
+    [src]="housingLocation.photo"
+    alt="Exterior photo of {{ housingLocation.name }}"
+  />
+
+  <div class="mt-5">
+    <h2 class="font-bold uppercase text-sky-500">
+      <a [routerLink]="['/details', housingLocation.id]">
+        {{ housingLocation.name }}
+      </a>
+    </h2>
+    <p>{{ housingLocation.city }} {{ housingLocation.state }}</p>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+<article>
+  <img
+    class="listing-photo"
+    [src]="housingLocation?.photo"
+    alt="Exterior photo of {{ housingLocation?.name }}"
+  />
+  <section class="listing-description">
+    <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
+    <p class="listing-location">
+      {{ housingLocation?.city }}, {{ housingLocation?.state }}
+    </p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this housing location</h2>
+    <ul>
+      <li>Units available: {{ housingLocation?.availableUnits }}</li>
+      <li>Does this location have wifi: {{ housingLocation?.wifi }}</li>
+      <li>Does this location have laundry: {{ housingLocation?.laundry }}</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Apply now to live here</h2>
+    <form
+      [formGroup]="applyForm"
+      (submit)="submitApplication()"
+      class="max-w-sm space-y-4"
+    >
+      <div class="flex flex-col gap-2">
+        <label
+          for="first-name"
+          class="text-blue-500 uppercase text-sm font-semibold"
+          >First Name</label
+        >
+        <input
+          id="first-Name"
+          class="border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-0 rounded py-1.5"
+          type="text"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label
+          for="last-name"
+          class="text-blue-500 uppercase text-sm font-semibold"
+          >Last Name</label
+        >
+        <input
+          id="last-Name"
+          class="border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-0 rounded py-1.5"
+          type="text"
+          formControlName="lastName"
+        />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="email" class="text-blue-500 uppercase text-sm font-semibold"
+          >Email</label
+        >
+        <input
+          id="email"
+          class="border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-0 rounded py-1.5"
+          type="text"
+          formControlName="email"
+        />
+      </div>
+      <button class="py-1.5 px-4 bg-blue-500 text-white rounded" type="submit">
+        Apply Now
+      </button>
+    </form>
+  </section>
+</article>

@@ -1,1 +1,17 @@
-<h2 class="text-lg">Welcome to {{ title }}</h2>
+<!-- <h2 class="text-lg">Welcome to {{ title }}</h2> -->
+<!---->
+<!-- <p>{{ count() }}</p> -->
+<!-- <p>{{ doubleCount() }}</p> -->
+<!---->
+<!-- <button (click)="increment()" class="block">Increment</button> -->
+<!-- <button (click)="updateValue(4)">Update value</button> -->
+<!---->
+<!-- <app-home></app-home> -->
+
+<div class="container mx-auto">
+  <a [routerLink]="['/']">Test</a>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</div>
